@@ -1,5 +1,6 @@
 import { useState } from "react";
-import "../css/Style.css"
+import  "../css/Style.css"
+import Food from "../assets/Palakkad.avif"
 export default function Card() {
     const [quantity,setQuantity]=useState(0);
     const IncrementQuantity=()=>{
@@ -15,8 +16,8 @@ export default function Card() {
   return (
     <>
    <div>
-   <div className="card m-3" style={{ width: "18rem",maxHeight:"460px" }}>
-          <img src="..." className="card-img-top" alt="..." />
+   <div className="card m-3" style={{ width: "18rem",maxHeight:"560px" }}>
+          <img src={Food} className="card-img-top" alt="..."  style={{maxHeight:"200px"}}/>
           <div className="card-body">
             <h5 className="card-title">Card title</h5>
             <p className="card-text">
