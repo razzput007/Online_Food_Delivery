@@ -4,6 +4,7 @@ const cors=require('cors')
 const port = 5000
 const connectDB=require('./database/db')
 const routes=require('./Routes/CreateUser')
+const routes2=require('./Routes/DisplayUser')
 connectDB();
 
 app.use(cors());
@@ -13,6 +14,7 @@ app.get('/', (req, res) => {
 })
 
 app.use('/api/',routes);
+app.use('/api/',routes2);
 
   app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)
